@@ -13,10 +13,14 @@
 </head>
 <body class="easyui-layout">
     <div data-options="region:'north',border:false" style="height:40px;background:#0099c8;padding:10px" >logo</div>
-    <div data-options="region:'west',split:true,title:'Menu'" style="width:150px;padding:10px" >left content</div>
+    <div data-options="region:'west',split:true,title:'Menu'" style="width:150px;padding:10px" >
+    <ul id="tt"></ul>
+    </div>
     <div data-options="region:'south',border:false" style="height:20px;background:#ccc;padding:1px" >This is admin</div>
     <div data-options="region:'center',title:'Center'" >Center</div>
 
-    
+    <script type="text/javascript">
+        $('#tt').tree({url:'/Tree/Index',checkbox:true });
+    </script>
 </body>
 </html>
