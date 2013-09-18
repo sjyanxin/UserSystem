@@ -66,8 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PrimController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -326,6 +328,8 @@
     <Content Include="Content\easyui\themes\metro\window.css" />
     <Content Include="Global.asax" />
     <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Account\Login.aspx" />
+    <Content Include="Views\Home\UserManager.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -353,6 +357,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\easyui\themes\black\images\Thumbs.db" />
