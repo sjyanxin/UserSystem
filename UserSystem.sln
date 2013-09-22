@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserSystem.Data", "UserSyst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserSystem.Web", "UserSystem.Web\UserSystem.Web.csproj", "{A2DF7E69-8CF4-4388-84E2-FE1FD54AC228}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maticsoft.DBUtility", "UserSystem.DBUtility\Maticsoft.DBUtility.csproj", "{0988C62E-247F-471F-A183-DB509C7A3839}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{A2DF7E69-8CF4-4388-84E2-FE1FD54AC228}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2DF7E69-8CF4-4388-84E2-FE1FD54AC228}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2DF7E69-8CF4-4388-84E2-FE1FD54AC228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0988C62E-247F-471F-A183-DB509C7A3839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0988C62E-247F-471F-A183-DB509C7A3839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0988C62E-247F-471F-A183-DB509C7A3839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0988C62E-247F-471F-A183-DB509C7A3839}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

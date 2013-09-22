@@ -37,6 +37,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CodematicDemo\Lib\System.Data.SQLite.DLL</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -327,6 +331,8 @@
     <Content Include="Content\easyui\themes\metro\validatebox.css" />
     <Content Include="Content\easyui\themes\metro\window.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Common\Login.js" />
+    <None Include="System.Data.SQLite.DLL" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Account\Login.aspx" />
     <Content Include="Views\Home\UserManager.aspx" />
@@ -365,6 +371,20 @@
     <None Include="Content\easyui\themes\default\images\Thumbs.db" />
     <None Include="Content\easyui\themes\gray\images\Thumbs.db" />
     <None Include="Content\easyui\themes\metro\images\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UserSystem.Business\UserSystem.Business.csproj">
+      <Project>{247020D7-1948-45F7-A9AE-1A317577E229}</Project>
+      <Name>UserSystem.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserSystem.Common\UserSystem.Common.csproj">
+      <Project>{E07BC9E2-5BBF-4BB7-9301-CA4987CE113F}</Project>
+      <Name>UserSystem.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserSystem.Model\UserSystem.Model.csproj">
+      <Project>{6EC76432-5526-4ED7-8533-837D315061B6}</Project>
+      <Name>UserSystem.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

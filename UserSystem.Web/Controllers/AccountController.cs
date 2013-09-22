@@ -21,5 +21,27 @@ namespace UserSystem.Web.Controllers
             return View();
         }
 
+        UserSystem.Business.UserManager userManager = new Business.UserManager();
+        public ActionResult DoLogin()
+        {
+            int res = 0;
+
+            string name = Request.Form["name"];
+            string pwd=Request.Form["pwd"];
+            if (string.IsNullOrEmpty(name))
+            {
+                res= - 1;
+            }
+           var userlist= userManager.GetModelList(string.Format(" name='{0}' and pwd='{1}'",name,pwd));
+           if (userlist.Count == 0)
+           {
+               res = -2;
+           }
+          
+            return Content(res.ToString());
+        }
+
+
+        
     }
 }

@@ -10,10 +10,25 @@
     <script src="../../Content/easyui/easyui-lang-zh_CN.js" type="text/javascript"></script>
     <link href="../../Content/easyui/themes/default/easyui.css" rel="stylesheet" type="text/css" />
     <link href="../../Content/easyui/themes/icon.css" rel="stylesheet" type="text/css" />
+    <script src="../../Scripts/Common/Login.js" type="text/javascript"></script>
 </head>
 <body>
-    <div>
-    This is login page
+    <div id="win" class="easyui-window" title="Login" style="width:260px;height:180px" 
+    data-options="iconCls:'icon-save',model:true,minimizable:false,collapsible:false,maximizable:false,closable:false,draggable:false,resizable:false">
+   <table style="margin-left:15px; margin-top:10px">
+       <tr>
+            <td>Username:</td><td><input id="name" type="text"/></td>
+       </tr>
+        <tr>
+            <td>Password:</td><td><input id="pwd" type="text"/></td>
+       </tr>
+        <tr>
+            <td></td><td><input id="btnLogin" type="button" onclick="Login();" value="Login"/></td>
+       </tr>
+        <tr>
+            <td></td><td><label id="showInfo" style="color:Red"></label></td>
+       </tr>
+   </table>
     </div>
 </body>
 </html>
