@@ -37,11 +37,30 @@ namespace UserSystem.Web.Controllers
            {
                res = -2;
            }
+           else
+           {
+               Session["user"] = userlist[0];
+           }
           
             return Content(res.ToString());
         }
 
+        public ActionResult DoLogout()
+        {
+            int res=1;
+            try
+            {
+                Session.RemoveAll();
+                Session.Clear();
+                res = 1;
+            }
+            catch (Exception )
+            {
+                res = 0;
+            }
 
+            return Content(res.ToString()); ;
+        }
         
     }
 }

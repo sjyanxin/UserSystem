@@ -10,7 +10,7 @@ namespace UserSystem.Web.Controllers
     {
         //
         // GET: /Home/
-
+        [LoginCheckController]
         public ActionResult Index()
         {
             return View();

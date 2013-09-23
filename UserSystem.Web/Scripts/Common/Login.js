@@ -13,7 +13,26 @@
                  $("#showInfo").text("Your user name can't be empty!");
              } else {
                  $("#showInfo").text("You login!");
+                 window.location.href = "/Home/Index";
              }
          });
     }
-}
+ }
+
+ function Logout() {
+     $.messager.confirm("Confirm", "Do you want to exit?", function (r) {
+         if (r) {
+             $.post("/account/DoLogout",
+                 function (data) {
+                     if (data == 1) {                     
+                         window.location.href = "/account/login";
+                     }
+                     else {
+                         alert("Exit fail");
+                     }
+                 });
+           
+         }
+     });
+    
+ }

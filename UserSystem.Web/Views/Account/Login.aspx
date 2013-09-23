@@ -17,10 +17,10 @@
     data-options="iconCls:'icon-save',model:true,minimizable:false,collapsible:false,maximizable:false,closable:false,draggable:false,resizable:false">
    <table style="margin-left:15px; margin-top:10px">
        <tr>
-            <td>Username:</td><td><input id="name" type="text"/></td>
+            <td>Username:</td><td><input id="name" type="text" value="admin"/></td>
        </tr>
         <tr>
-            <td>Password:</td><td><input id="pwd" type="text"/></td>
+            <td>Password:</td><td><input id="pwd" type="password" value="123456"/></td>
        </tr>
         <tr>
             <td></td><td><input id="btnLogin" type="button" onclick="Login();" value="Login"/></td>
@@ -30,5 +30,9 @@
        </tr>
    </table>
     </div>
+    <script type="text/javascript">
+      
+    </script>
+
 </body>
 </html>

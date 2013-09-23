@@ -9,11 +9,23 @@
     <script src="../../Content/easyui/easyui-lang-zh_CN.js" type="text/javascript"></script>
     <link href="../../Content/easyui/themes/default/easyui.css" rel="stylesheet" type="text/css" />
     <link href="../../Content/easyui/themes/icon.css" rel="stylesheet" type="text/css" />
+    <script src="../../Scripts/Common/Login.js"  type="text/javascript"></script>
 </head>
 <body class="easyui-layout">
+<%
+    var user = Session["user"] as UserSystem.Model.UserManager;
+     %>
+
     <div data-options="region:'north',border:false" style="height: 40px; background: #0099c8;
         padding: 10px">
-        logo</div>
+        <div style="float:left;"></div>
+        <div style="padding:5px;float:right">
+		    <a href="#" class="easyui-linkbutton" data-options="plain:true">Home</a>
+		    <a href="#" class="easyui-menubutton" data-options="iconCls:'icon-edit'" onclick="Logout();">Logout</a>
+		    <a href="#" class="easyui-menubutton" data-options="menu:'#mm2',iconCls:'icon-help'">Help</a>
+		    <a href="#" class="easyui-menubutton" data-options="menu:'#mm3'">About</a>
+	    `</div>
+    </div>
     <div data-options="region:'west',split:true,title:'Menu'" style="width: 180px; padding: 10px">
         <div class="easyui-accordion" data-options="fit:true">
             <div title="About" data-options="iconCls:'icon-save'" style="overflow: auto; padding: 10px;">
@@ -27,9 +39,8 @@
         </div>
         </ul>
     </div>
-    <div data-options="region:'south',border:false" style="height: 20px; background: #ccc;
-        padding: 1px">
-        This is admin</div>
+    <div data-options="region:'south',border:false" style="height: 20px; background: #ccc;padding: 1px">
+        Current user : <%=user.Name %></div>
     <div data-options="region:'center'">
         <div  id="tabs" class="easyui-tabs" data-options="fit:true">
             <div title="tab1" style="padding: 20px; display: none">
@@ -58,6 +69,7 @@
         }
         }
         );
+   
     </script>    
 </body>
 </html>   
