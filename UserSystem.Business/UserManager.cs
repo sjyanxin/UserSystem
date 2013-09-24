@@ -166,6 +166,16 @@ namespace UserSystem.Business
 		#region  ExtensionMethod
 
 		#endregion  ExtensionMethod
-	}
+
+        public DataSet GetAllList(int pageNum, int rowNum)
+        {
+            return GetList(pageNum, rowNum);
+        }
+
+        private DataSet GetList(int pageNum, int rowNum)
+        {
+            return dal.GetList(pageNum, rowNum);
+        }
+    }
 }
 

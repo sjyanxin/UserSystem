@@ -43,12 +43,8 @@
         Current user : <%=user.Name %></div>
     <div data-options="region:'center'">
         <div  id="tabs" class="easyui-tabs" data-options="fit:true">
-            <div title="tab1" style="padding: 20px; display: none">
-            </div>
-            <div title="tab2" style="">
-            </div>
-            <div title="tab3" style="">
-            </div>
+            <div title="Home Page" style="padding: 20px; display: none">Home Page
+            </div>          
         </div>
     </div>
     <script type="text/javascript">

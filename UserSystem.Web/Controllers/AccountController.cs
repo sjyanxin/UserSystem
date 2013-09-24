@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UserSystem.Common;
 
 namespace UserSystem.Web.Controllers
 {
@@ -27,40 +28,62 @@ namespace UserSystem.Web.Controllers
             int res = 0;
 
             string name = Request.Form["name"];
-            string pwd=Request.Form["pwd"];
+            string pwd = Request.Form["pwd"];
             if (string.IsNullOrEmpty(name))
             {
-                res= - 1;
+                res = -1;
             }
-           var userlist= userManager.GetModelList(string.Format(" name='{0}' and pwd='{1}'",name,pwd));
-           if (userlist.Count == 0)
-           {
-               res = -2;
-           }
-           else
-           {
-               Session["user"] = userlist[0];
-           }
-          
+            var userlist = userManager.GetModelList(string.Format(" name='{0}' and pwd='{1}'", name, pwd));
+            if (userlist.Count == 0)
+            {
+                res = -2;
+            }
+            else
+            {
+                Session["user"] = userlist[0];
+            }
+
             return Content(res.ToString());
         }
 
         public ActionResult DoLogout()
         {
-            int res=1;
+            int res = 1;
             try
             {
                 Session.RemoveAll();
                 Session.Clear();
                 res = 1;
             }
-            catch (Exception )
+            catch (Exception)
             {
                 res = 0;
             }
 
             return Content(res.ToString()); ;
         }
-        
+
+        public ActionResult ReadUser()
+        {
+
+            int pageNum = Convert.ToInt32(Request.Form["page"]);
+            int rowNum = Convert.ToInt32(Request.Form["rows"]);
+            int count = userManager.GetAllList().Tables[0].Rows.Count;
+            var dt = userManager.GetAllList(pageNum, rowNum).Tables[0];
+            return Content(JsonHelper.ToJson(dt, count));
+        }
+
+
+        public ActionResult AddUser()
+        {
+            int res = 0;
+            string name = Request.Form["name"];
+            string pwd = Request.Form["pwd"];
+
+            res = userManager.Add(new Model.UserManager() { Name = name, Pwd = pwd, AddTime = DateTime.Now.ToString() });
+
+            return Content(res.ToString()); ;
+        }
+
     }
 }
