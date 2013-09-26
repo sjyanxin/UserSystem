@@ -16,5 +16,16 @@ namespace UserSystem.Web.Controllers
             return View();
         }
 
+        public ActionResult Manager()
+        {
+            return View();
+        }
+
+        public ActionResult Search()
+        {
+            return View();
+        }
+
+
     }
 }

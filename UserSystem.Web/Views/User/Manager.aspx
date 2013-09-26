@@ -39,7 +39,7 @@
 			User Name: <input id="name" class="text" style="width:80px">
 			Password: <input id="pwd" class="text" style="width:80px">
 		
-			<a href="#" class="easyui-linkbutton" iconCls="icon-search" onclick="AddUser();">Add</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-add" onclick="AddUser();">Add</a>
 		</div>
 	</div>
 </body>

@@ -5,15 +5,21 @@
 			"id":122,
 			"text":"Add User",
              "attributes":{
-            "url":"/demo/book/abc"
+            "url":"/User/Manager"
             }
 
 		},{
 			"id":123,
-			"text":"Search User"
+			"text":"Search User",
+             "attributes":{
+            "url":"/User/Search"
+            }
 		},{
 			"id":124,
-			"text":"Games"
+			"text":"Other",
+             "attributes":{
+            "url":"/User/Manage"
+            }
 		}]
 	}
 ]

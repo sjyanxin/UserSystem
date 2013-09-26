@@ -16,9 +16,11 @@
     var user = Session["user"] as UserSystem.Model.UserManager;
      %>
 
-    <div data-options="region:'north',border:false" style="height: 40px; background: #0099c8;
-        padding: 10px">
-        <div style="float:left;"></div>
+    <div data-options="region:'north',border:false" style="height: 40px; background: #0099c8;">
+        <div style="float:left;">
+            <img src="../../Content/santa-gloce.png" / style="height:45px;float:left; margin:5px">
+            <label style="float:left;font-size:15px;margin-top:10px">User Management System</label>
+         </div>
         <div style="padding:5px;float:right">
 		    <a href="#" class="easyui-linkbutton" data-options="plain:true">Home</a>
 		    <a href="#" class="easyui-menubutton" data-options="iconCls:'icon-edit'" onclick="Logout();">Logout</a>
@@ -28,10 +30,10 @@
     </div>
     <div data-options="region:'west',split:true,title:'Menu'" style="width: 180px; padding: 10px">
         <div class="easyui-accordion" data-options="fit:true">
-            <div title="About" data-options="iconCls:'icon-save'" style="overflow: auto; padding: 10px;">
+            <div title="User Manage" data-options="iconCls:'icon-save'" style="overflow: auto; padding: 10px;">
                 <ul id="tt">
             </div>
-            <div title="Admin" data-options="iconCls:'icon-ok',closable:true" style="overflow: auto;
+            <div title="System Design" data-options="iconCls:'icon-ok',closable:true" style="overflow: auto;
                 padding: 10px">
             </div>
             <div title="Help" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px">
@@ -60,7 +62,7 @@
                 title: node.text,
                 content: 'Tab Body',
                 closable: true,
-                href: '/Home/UserManager'
+                href: node.attributes.url
             });
         }
         }

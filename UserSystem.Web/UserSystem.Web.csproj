@@ -331,6 +331,7 @@
     <Content Include="Content\easyui\themes\metro\tree.css" />
     <Content Include="Content\easyui\themes\metro\validatebox.css" />
     <Content Include="Content\easyui\themes\metro\window.css" />
+    <Content Include="Content\santa-gloce.png" />
     <Content Include="Global.asax" />
     <Content Include="jquery-easyui-1.3.2\changelog.txt" />
     <Content Include="jquery-easyui-1.3.2\demo\accordion\actions.html" />
@@ -829,7 +830,8 @@
     <Content Include="Scripts\Common\UserManager.js" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Account\Login.aspx" />
-    <Content Include="Views\Home\UserManager.aspx" />
+    <Content Include="Views\User\Search.aspx" />
+    <Content Include="Views\User\Manager.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -855,9 +857,7 @@
     <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\User\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Content\easyui\themes\black\images\Thumbs.db" />
     <None Include="Content\easyui\themes\bootstrap\images\Thumbs.db" />

@@ -85,5 +85,15 @@ namespace UserSystem.Web.Controllers
             return Content(res.ToString()); ;
         }
 
+
+
+        public ActionResult SearchUser()
+        {
+            int pageNum = Convert.ToInt32(Request.Form["name"]);
+            int rowNum = Convert.ToInt32(Request.Form["rows"]);
+            int count = userManager.GetAllList().Tables[0].Rows.Count;
+            var dt = userManager.GetAllList(pageNum, rowNum).Tables[0];
+            return Content(JsonHelper.ToJson(dt, count));
+        }
     }
 }

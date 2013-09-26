@@ -14,4 +14,18 @@
              }
          });
     }
-}
+ }
+
+ function SearchUser() {
+     var name = $("#name").val();
+   
+     if (name === "" ) {
+         $.messager.alert("warning", "Your username  is empty!");
+     } else {
+         $.post("/account/Searchuser", { "name": name },
+         function (data) {           
+                 $('#dg').datagrid('reload');
+           
+         });
+     }
+ }
