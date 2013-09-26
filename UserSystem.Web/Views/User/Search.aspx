@@ -11,7 +11,7 @@
     <table id="dg" class="easyui-datagrid" style="width:700px;height:250px"
 			data-options="singleSelect:true,
             collapsible:true,
-            url:'/account/readuser',
+            url:'/account/Searchuser',
             toolbar:'#tb',
             fit:true,
             rownumbers:true,

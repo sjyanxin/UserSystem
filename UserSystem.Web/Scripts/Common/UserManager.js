@@ -22,10 +22,11 @@
      if (name === "" ) {
          $.messager.alert("warning", "Your username  is empty!");
      } else {
-         $.post("/account/Searchuser", { "name": name },
-         function (data) {           
-                 $('#dg').datagrid('reload');
-           
-         });
+//     $.post("/account/Searchuser", { "name": name },
+//         function (data) {
+
+             $('#dg').datagrid({url : "/account/Searchuser?name="+name});
+           //  $('#dg').datagrid('load', { "name": name });
+         //});
      }
  }

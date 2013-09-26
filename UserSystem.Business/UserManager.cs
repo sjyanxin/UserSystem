@@ -167,14 +167,14 @@ namespace UserSystem.Business
 
 		#endregion  ExtensionMethod
 
-        public DataSet GetAllList(int pageNum, int rowNum)
+        public DataSet GetAllList(int pageNum, int rowNum,string strWhere=null)
         {
-            return GetList(pageNum, rowNum);
+            return GetList(pageNum, rowNum,strWhere);
         }
 
-        private DataSet GetList(int pageNum, int rowNum)
+        private DataSet GetList(int pageNum, int rowNum, string strWhere = null)
         {
-            return dal.GetList(pageNum, rowNum);
+            return dal.GetList(pageNum, rowNum,strWhere);
         }
     }
 }

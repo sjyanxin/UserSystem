@@ -89,11 +89,30 @@ namespace UserSystem.Web.Controllers
 
         public ActionResult SearchUser()
         {
-            int pageNum = Convert.ToInt32(Request.Form["name"]);
+            var name = Request.Params["name"];
+            int pageNum = Convert.ToInt32(Request.Form["page"]);
             int rowNum = Convert.ToInt32(Request.Form["rows"]);
-            int count = userManager.GetAllList().Tables[0].Rows.Count;
-            var dt = userManager.GetAllList(pageNum, rowNum).Tables[0];
-            return Content(JsonHelper.ToJson(dt, count));
+
+            string strwhere = null;
+            int count = 0;
+            if (!string.IsNullOrEmpty(name))
+            {
+                strwhere = "name like '%" + name + "%'";
+            }
+            else
+            {
+                count = userManager.GetAllList().Tables[0].Rows.Count;
+            }
+            var ds = userManager.GetAllList(pageNum, rowNum, strwhere);
+
+            if (count == 0)
+            {
+                count = ds.Tables[0].Rows.Count;
+            }
+
+
+            return Content(JsonHelper.ToJson(ds.Tables[0], count));
+
         }
     }
 }

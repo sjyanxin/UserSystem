@@ -291,12 +291,16 @@ namespace UserSystem.Data
 
         #endregion  ExtensionMethod
 
-        public DataSet GetList(int pageNum, int rowNum)
+        public DataSet GetList(int pageNum, int rowNum, string strWhere = null)
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select AddTime,Pwd,Name,ID ");
             strSql.Append(" FROM UserManager ");
-            strSql.Append(string.Format( "limit {0} offset {1}",rowNum,(pageNum-1)*rowNum));
+            if (!string.IsNullOrEmpty(strWhere))
+            {
+                 strSql.Append(" where "+strWhere );
+            }
+            strSql.Append(string.Format( " limit {0} offset {1}",rowNum,(pageNum-1)*rowNum));
             return DbHelperSQLite.Query(strSql.ToString());
         }
     }
